@@ -1,30 +1,35 @@
 import React, {useState} from 'react'
 import './App.css'
+import NotePad from './Components/Core/NotePad'
+import Dock from './Components/Core/Dock'
+import NotesList from './Components/Core/NotesList'
 
 
 export default function App(){
 	
-	const [open, setOpen] = useState(true)
-	
-	const stylePad ={
-		width: open ? '75%' : 'calc(100% - var(--dockWidth)',
-	}
+	const [showList, setShowList] = useState(true)
+	const [activeFolder, setActiveFolder] = useState('All Notes')
 	
 	const styleBG = {
-		backgroundColor: !open ? 'var(--dockColor)' : 'var(--backgroundColor)',
-		boxShadow: open ? 'var(--menuShadow)' : 'var(--menuShadow)' 
+		backgroundColor: !showList ? 'var(--dockColor)' : 'var(--backgroundColor)',
 	}
 	
 	return (
 		<div className="App" style = {styleBG}>
 			
-			<div className="dock">
-				<button onClick={()=>{
-					setOpen(!open)
-				}}>+</button>
-			</div>
+			<Dock 
+				showList = {showList}
+				setshowList = {setShowList}
+			>
+				{/* The Dock Icons go here. Need a DockIcon component */}
+			</Dock>
 			
-			<div style={stylePad} className="notePad"></div>
+			<NotesList 
+				showList = {showList}
+				activeFolder = {activeFolder}
+			/>
+			
+			<NotePad showList = {showList}/>
 			
 		</div>
 	)
