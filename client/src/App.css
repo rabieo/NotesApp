@@ -8,6 +8,7 @@
 	--dockIconColor: white;
 	
 	--menuShadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	--dockWidth: 55px;
 }
 
 
@@ -25,17 +26,28 @@
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
+	transition-delay: 0.4s;
+	transition: background-color 0.3s;
 }
 
 .dock{
 	height: 100%;
-	width: 55px;
+	width: var(--dockWidth);
 	background-color: var(--dockColor);
 	color: var(--dockIconColor);
 }
 
+.dock button{
+	background-color: transparent;
+	width: 100%;
+	outline: none !important;
+	border: none;
+	font-size: 40pt;
+	color: white;
+	
+}
+
 .notePad{
-	width: 70%;
 	background-color: var(--foreGround);
 	height: 100%;
 	position: absolute;
@@ -43,4 +55,5 @@
 	border-top-left-radius: 25px;
 	border-bottom-left-radius: 25px;
 	box-shadow: var(--menuShadow);
+	transition: all 0.4s ease-out;
 }
