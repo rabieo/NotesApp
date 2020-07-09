@@ -12,7 +12,6 @@ export default function App(){
 	
 	const styleBG = {
 		backgroundColor: !open ? 'var(--dockColor)' : 'var(--backgroundColor)',
-		backgroundColor: !open ? 'var(--dockColor)' : 'var(--backgroundColor)',
 		boxShadow: open ? 'var(--menuShadow)' : 'var(--menuShadow)' 
 	}
 	
