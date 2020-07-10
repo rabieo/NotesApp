@@ -23,7 +23,23 @@
 	height: 100%;
 }
 
-.NoteCard h2{
+.NoteCard input{
 	margin: 0;
 	padding: 0;
+	width: 85%;
+	overflow: hidden;
+	background-color: transparent;
+	font-size: 16pt;
+	outline: none !important;
+	border: none;
+}
+
+.NoteCard .titleBar{
+	padding-bottom: 5px;
+	display: flex;
+}
+
+.NoteCard .dateBox{
+	font-size: 10pt;
+	text-align: right;
 }

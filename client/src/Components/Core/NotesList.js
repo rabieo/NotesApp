@@ -11,9 +11,10 @@ export default function NotesList(props) {
 		<div className="notesList" style={styleList}>
 			<h1>{props.activeFolder}</h1>
 			
-			{props.notes.map((n)=>{
+			{props.notes.map((n, i)=>{
 				return(
 					<NoteCard 
+						key = {'notecard'+i}
 						note = {n}
 						setActiveNote = {props.setActiveNote}
 						showList = {props.showList}

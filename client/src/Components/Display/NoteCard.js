@@ -1,5 +1,6 @@
 import React from 'react'
 import './NoteCard.css'
+import moment from 'moment'
 
 export default function NoteCard(props) {
 	
@@ -8,7 +9,16 @@ export default function NoteCard(props) {
 			{/* <div className="shadowBox"></div> */}
 			
 			<div className="cardBody">
-				<h2>{props.note.title}</h2>
+				<div className="titleBar">
+					<input 
+						type='text'
+						defaultValue={props.note.title}
+						disabled = {true}
+					/>
+					<div className="dateBox">
+						{moment(props.note.dateCreated.toDate()).format('D[-]MMM[-]YY')}
+					</div>
+				</div>
 				{props.note.body}
 			</div>
 			

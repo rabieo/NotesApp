@@ -30,24 +30,6 @@
 	transition: background-color 0.4s ease-out;
 }
 
-.dock{
-	height: 100%;
-	width: var(--dockWidth);
-	background-color: var(--dockColor);
-	color: var(--dockIconColor);
-}
-
-.dock button{
-	background-color: transparent;
-	width: 100%;
-	outline: none !important;
-	border: none;
-	font-size: 40pt;
-	color: white;
-	cursor: pointer;
-	
-}
-
 .notePad{
 	background-color: var(--foreGround);
 	height: 100%;
