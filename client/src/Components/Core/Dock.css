@@ -1,0 +1,17 @@
+.dock{
+	height: 100%;
+	width: var(--dockWidth);
+	background-color: var(--dockColor);
+	color: var(--dockIconColor);
+}
+
+.dock .menuButton{
+	background-color: transparent;
+	width: 100%;
+	outline: none !important;
+	border: none;
+	font-size: 30pt;
+	color: white;
+	cursor: pointer;
+	padding: 10px 0;
+}
