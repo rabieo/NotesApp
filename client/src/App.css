@@ -8,7 +8,9 @@
 	--dockIconColor: white;
 	
 	--menuShadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	
 	--dockWidth: 55px;
+	--notePadWidth: 75%;
 }
 
 *{
@@ -59,7 +61,8 @@
 }
 
 .notesList{
-	width: 50%;
+	width: calc(100% + 25px - var(--notePadWidth) - var(--dockWidth));
+	
 	height: 100%;
 	transition: opacity 0.4s ease-out;
 }

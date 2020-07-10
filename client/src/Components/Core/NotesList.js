@@ -1,4 +1,5 @@
 import React from 'react'
+import NoteCard from '../Display/NoteCard'
 
 export default function NotesList(props) {
 	
@@ -9,7 +10,17 @@ export default function NotesList(props) {
 	return (
 		<div className="notesList" style={styleList}>
 			<h1>{props.activeFolder}</h1>
-			{/* Notes components go here */}
+			
+			{props.notes.map((n)=>{
+				return(
+					<NoteCard 
+						note = {n}
+						setActiveNote = {props.setActiveNote}
+						showList = {props.showList}
+					/>
+				)
+			})}
+			
 		</div>
 	)
 }
