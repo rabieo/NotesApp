@@ -23,17 +23,6 @@
 	height: 100%;
 }
 
-.NoteCard input{
-	margin: 0;
-	padding: 0;
-	width: 85%;
-	overflow: hidden;
-	background-color: transparent;
-	font-size: 16pt;
-	outline: none !important;
-	border: none;
-}
-
 .NoteCard .titleBar{
 	padding-bottom: 5px;
 	display: flex;
@@ -42,4 +31,26 @@
 .NoteCard .dateBox{
 	font-size: 10pt;
 	text-align: right;
+}
+
+/* title */
+.NoteCard input{
+	margin: 0;
+	padding: 0;
+	width: calc(85% - 20px);
+	margin-right: 20px;
+	overflow: hidden;
+	background-color: var(--backgroundColor);
+	filter: brightness(92%);
+	font-size: 16pt;
+	outline: none !important;
+	border: none;
+	cursor: text;
+	border-radius: 5px;
+	padding: 0 5px;
+}
+
+.NoteCard input:read-only{
+	padding: 0;
+	background-color: transparent;
 }

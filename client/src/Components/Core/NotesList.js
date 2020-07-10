@@ -1,5 +1,6 @@
 import React from 'react'
 import NoteCard from '../Display/NoteCard'
+import './NotesList.css'
 
 export default function NotesList(props) {
 	
@@ -8,7 +9,7 @@ export default function NotesList(props) {
 	}
 	
 	return (
-		<div className="notesList" style={styleList}>
+		<div className="NotesList" style={styleList}>
 			<h1>{props.activeFolder}</h1>
 			
 			{props.notes.map((n, i)=>{
